@@ -44,6 +44,12 @@ def display_records(employee_info):
     for item in employee_info:
         print((item["name"] + "\t" + str(item["age"]) + "\t" + item["department"] + "\t" + str(item["salary"])).expandtabs(15))
 
+def get_employees_by_dept(department):
+    data=[]
+    for i in employee_data:
+        if i["department"] == department:
+            data.append(i)
+    return data
 def display_main_menu():
 
     print("\n----- Employee information Tracker -----")
